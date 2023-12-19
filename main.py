@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow,QTableWidgetItem
 from PyQt5.uic import loadUi
 import sqlite3
 
@@ -15,7 +15,7 @@ class CoffeeApp(QMainWindow):
         self.load_data()
 
     def load_data(self):
-        connection = sqlite3.connect('coffee.sqlite')
+        connection = sqlite3.connect('coffee.db')
         cursor = connection.cursor()
 
         # Пример SQL-запроса. Замените его на необходимый запрос для вашей базы данных.
